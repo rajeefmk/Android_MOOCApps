@@ -1,0 +1,12 @@
+public class YourInitials{
+	public static void main(String[] args){
+	
+		System.out.println("m   mkk");
+		System.out.println("mm mmkk");
+		System.out.println("mm mmkk");
+		System.out.println("m m mkk");
+		System.out.println("m   mkk");
+		System.out.println("m   mkk");
+		System.out.println("m   mkk");
+	}
+}
