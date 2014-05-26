@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;course.labs.todomanager.ToDoItem.FORMAT&apos; in &apos;course.labs.todomanager.ToDoItem&apos;&#x0A;- Original project: &apos;UILabs&apos;&#x0A;- Original element: &apos;course.labs.todomanager.ToDoItem.FORMAT&apos;&#x0A;- Getter method name: &apos;getFormat&apos;&#x0A;- Setter method name: &apos;setFormat&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;FORMAT&apos;" flags="589830" getter="getFormat" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;course.labs.todomanager{ToDoItem.java[ToDoItem^FORMAT" insertion="12" setter="setFormat" stamp="1394042474766" version="1.0" visibility="1"/>
+</session>

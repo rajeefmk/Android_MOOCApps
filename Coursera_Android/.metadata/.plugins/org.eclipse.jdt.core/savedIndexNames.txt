@@ -1,0 +1,8 @@
+INDEX VERSION 1.126+/home/rj/workspace/Coursera_Android/.metadata/.plugins/org.eclipse.jdt.core
+1415693123.index
+3129011036.index
+4289540965.index
+1857538366.index
+2229195627.index
+3321671495.index
+3367578413.index
