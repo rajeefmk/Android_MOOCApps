@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Man{
+	String name;
+	int age;
+}
+
+public class Auto_Object_creator {
+	public static void main(String[] args) {
+		
+		int[] person=new int[];
+		
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter No. of Objects");
+		int count=obj.nextInt();
+		
+		for(int i=0;i<count;i++){
+			
+			Man man1=new Man();
+			
+			person[i]=count;
+		}
+		
+	}
+}

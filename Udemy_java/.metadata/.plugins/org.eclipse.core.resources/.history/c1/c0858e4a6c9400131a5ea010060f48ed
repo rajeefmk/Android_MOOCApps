@@ -1,0 +1,15 @@
+
+public class Car extends Machine {
+
+	
+	@Override
+	public void machStart() {
+		// TODO Auto-generated method stub
+		super.machStart();
+	}
+
+	public void windShieldWiper(){
+		
+		System.out.println("Windshield Wiper Running");
+	}
+}

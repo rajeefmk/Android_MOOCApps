@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Man{
+	String name;
+	int age;
+}
+
+public class Test5 {
+	public static void main(String[] args) {
+		
+		int[] person=new int[];
+		
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter No. of Objects");
+		int count=obj.nextInt();
+		
+		
+		for(int i=0)
+		
+	}
+}

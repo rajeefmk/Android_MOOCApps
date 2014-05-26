@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Test5&apos; to &apos;Auto_Object_creator&apos;&#x0A;- Original project: &apos;Mytest&apos;&#x0A;- Original element: &apos;Test5&apos;&#x0A;- Renamed element: &apos;Auto_Object_creator&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Test5&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Test5.java[Test5" matchStrategy="1" name="Auto_Object_creator" qualified="false" references="true" similarDeclarations="false" stamp="1392188807199" textual="false" version="1.0"/>
+</session>

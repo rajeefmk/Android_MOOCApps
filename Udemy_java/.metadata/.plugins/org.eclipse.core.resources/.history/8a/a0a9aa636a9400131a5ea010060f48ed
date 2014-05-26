@@ -1,0 +1,11 @@
+public class Application26 {
+	public static void main(String[] args) {
+
+		Machine mach1=new Machine();
+		Car car1=new Car();
+		
+		mach1.machStart();
+		car1.windShieldWiper();
+		mach1.machStop();
+	}
+}
