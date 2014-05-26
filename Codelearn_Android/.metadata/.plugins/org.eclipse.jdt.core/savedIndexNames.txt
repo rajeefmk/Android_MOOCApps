@@ -1,0 +1,6 @@
+INDEX VERSION 1.126+/home/rj/workspace/Codelearn_Android/.metadata/.plugins/org.eclipse.jdt.core
+1042400965.index
+1270315800.index
+679402639.index
+269305447.index
+1936623016.index
