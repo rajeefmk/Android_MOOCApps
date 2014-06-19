@@ -1,9 +1,11 @@
 package org.codelearn.twitter;
+import org.codelearn.twitter.models.Tweet;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class TweetDetailActivity extends Activity  {
 
@@ -11,6 +13,12 @@ public class TweetDetailActivity extends Activity  {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tweet_detail);
+
+		Tweet value = (Tweet) getIntent().getSerializableExtra("Myclass");
+
+		TextView u1 = (TextView) findViewById(R.id.tweetTitle);
+		TextView u2 = (TextView) findViewById(R.id.tweetBody);
+		
 		}
 	
 

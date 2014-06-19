@@ -33,8 +33,6 @@ public class MainActivity extends Activity {
 			finish();
 		}
 		
-		
-		
 		_loginBtn = ( Button ) findViewById(R.id.btn_login);
 		
 		mUserName = (EditText) findViewById(R.id.fld_username);
