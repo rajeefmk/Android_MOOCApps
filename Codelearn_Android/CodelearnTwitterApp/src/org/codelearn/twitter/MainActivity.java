@@ -59,8 +59,6 @@ public class MainActivity extends Activity {
 				editor.commit();
 				//Log.d("Password Caught", mPasswordValue);
 				
-				
-				
 				Intent intent = new Intent(MainActivity.this, TweetListActivity.class);
 		        startActivity(intent);
 				

@@ -1170,8 +1170,14 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a000e;
         public static final int app_name=0x7f0a000d;
+        public static final int body_text=0x7f0a001b;
+        public static final int date=0x7f0a001c;
+        public static final int head_text=0x7f0a001a;
         public static final int hello_twitter=0x7f0a0010;
         public static final int hello_world=0x7f0a000f;
+        /**   Tweet Item 
+         */
+        public static final int imgDesc=0x7f0a0019;
         public static final int lbl_enter_pwd=0x7f0a0014;
         public static final int lbl_enter_username=0x7f0a0012;
         public static final int lbl_login=0x7f0a0015;
