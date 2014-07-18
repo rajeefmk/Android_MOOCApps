@@ -1,5 +1,6 @@
 package org.codelearn.twitter;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,8 +15,6 @@ public class MainActivity extends Activity {
 	
 	Button _loginBtn;
 	EditText mUserName,mPassword;
-	
-	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
