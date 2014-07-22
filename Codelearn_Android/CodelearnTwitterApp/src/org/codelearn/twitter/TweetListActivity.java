@@ -1,9 +1,7 @@
 package org.codelearn.twitter;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,8 +18,7 @@ public class TweetListActivity extends ListActivity {
 	
 	private static final String TWEETS_CACHE_FILE = "tweet_cache.ser";
 	
-	List<Tweet> tweets = new ArrayList<Tweet>();
-	List<Tweet> tweetsRead = new ArrayList<Tweet>();
+		List<Tweet> tweetsRead = new ArrayList<Tweet>();
 	List<Tweet> tweetsWrite = new ArrayList<Tweet>();
 	
 	TweetAdapter mTweetAdapter;
@@ -31,7 +28,8 @@ public class TweetListActivity extends ListActivity {
 		setContentView(R.layout.activity_tweet_list);
 		
 		
-		//File Read Code: Reading from TWEETS_CACHE_FILE and Storing it to tweetsRead which later on passed to Adapter
+		//File Read Code: Reading from TWEETS_CACHE_FILE and Storing it to tweetsRead arraylist
+		//which is later on passed to Adapter
 		FileInputStream fis = null;
 		ObjectInputStream ois = null;
 		
@@ -55,36 +53,43 @@ public class TweetListActivity extends ListActivity {
 			
 		}
 		
-		//Dummy Tweets Creation and 
-		
-		for (int i=0;i<20;i++){
+		tweetDisplay(tweetsRead);
 			
-			Tweet tweet = new Tweet();
-			tweet.setTitle("A nice header for Tweet # " + i);
-			tweet.setBody("Some random body text for the tweet #" + i);
-			tweetsWrite.add(tweet);
-		}
 		
-		//File Write Code - 
+		AsyncFetchTweets mAsyncFetchTweets = new AsyncFetchTweets(this);
 		
-		try{
-			FileOutputStream fos = openFileOutput(TWEETS_CACHE_FILE,MODE_PRIVATE);
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(tweetsWrite);
-			oos.close();
-			fos.close();
-			
-			Log.d("codelearn", "Successfully wrote tweets to the file.");
-			
-		}catch(Exception e){
-			
-			Log.e("codelearn", "Error writing tweets", e);
-			
-		}
+		mAsyncFetchTweets.execute();
 		
-		mTweetAdapter = new TweetAdapter(this, tweetsRead);
-		setListAdapter(mTweetAdapter);
+		//Dummy Tweets Creation and adding it to "tweetsWrite ArrayList."
 		
+			/*for (int i=0;i<20;i++){
+				
+				Tweet tweet = new Tweet();
+				tweet.setTitle("A nice header for Tweet # " + i);
+				tweet.setBody("Some random body text for the tweet #" + i);
+				tweetsWrite.add(tweet);
+			}*/
+		
+		//Writing to TWEETS_CACHE_FILE from "tweetsWrite ArrayList" ( Happens at "oos.writeObject(tweetWrite)" )
+		
+				/*try{
+					FileOutputStream fos = openFileOutput(TWEETS_CACHE_FILE,MODE_PRIVATE);
+					ObjectOutputStream oos = new ObjectOutputStream(fos);
+					oos.writeObject(tweetsWrite);
+					oos.close();
+					fos.close();
+					
+					Log.d("codelearn", "Successfully wrote tweets to the file.");
+					
+				}catch(Exception e){
+					
+					Log.e("codelearn", "Error writing tweets", e);
+					
+				}*/
+		
+		
+		
+			
 	}
 	
 	@Override
@@ -94,6 +99,16 @@ public class TweetListActivity extends ListActivity {
 		intent.putExtra("MyClass",(Tweet) getListAdapter().getItem(position));
 	     startActivity(intent);
 	}
-
+	
+	public void tweetDisplay(List<Tweet> tweetsRead){
+			
+			mTweetAdapter = new TweetAdapter(this, tweetsRead);
+			setListAdapter(mTweetAdapter);
+	}
+	
 	
 }
+
+
+
+

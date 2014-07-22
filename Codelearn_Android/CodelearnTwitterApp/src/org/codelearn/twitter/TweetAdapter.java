@@ -22,7 +22,6 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 	    inflater = activity.getWindow().getLayoutInflater();
 	    tweetsLocal = tweets;
 	}
-	
 
 	public TweetAdapter(Activity activity, String[] str){
 
@@ -30,13 +29,11 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 		inflater = activity.getWindow().getLayoutInflater();
 	}
 
-    
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
     	
     	View row = inflater.inflate(R.layout.row_tweet, parent, false);
     	Tweet currentTweet = tweetsLocal.get(position);
-
 
     	// Title of Tweet
     	TextView title = (TextView) row.findViewById(R.id.tweetTitle);
