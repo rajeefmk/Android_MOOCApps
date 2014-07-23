@@ -1178,6 +1178,7 @@ containing a value of this type.
         /**   Tweet Item 
          */
         public static final int imgDesc=0x7f0a0019;
+        public static final int imgDescDetail=0x7f0a001d;
         public static final int lbl_enter_pwd=0x7f0a0014;
         public static final int lbl_enter_username=0x7f0a0012;
         public static final int lbl_login=0x7f0a0015;

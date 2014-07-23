@@ -14,10 +14,13 @@ public class TweetDetailActivity extends Activity  {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tweet_detail);
 
-		Tweet value = (Tweet) getIntent().getSerializableExtra("Myclass");
-
-		TextView u1 = (TextView) findViewById(R.id.tweetTitle);
-		TextView u2 = (TextView) findViewById(R.id.tweetBody);
+		Tweet mTweet = (Tweet) getIntent().getSerializableExtra("MyTweet");
+		
+		TextView mTweetTitle = (TextView) findViewById(R.id.tweetTitle);
+		mTweetTitle.setText(mTweet.getTitle());
+		
+		TextView mTweetBody = (TextView) findViewById(R.id.tweetBody);
+		mTweetBody.setText(mTweet.getBody());
 		
 		}
 	

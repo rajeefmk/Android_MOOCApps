@@ -358,6 +358,7 @@ int string head_text 0x7f0a001a
 int string hello_twitter 0x7f0a0010
 int string hello_world 0x7f0a000f
 int string imgDesc 0x7f0a0019
+int string imgDescDetail 0x7f0a001d
 int string lbl_enter_pwd 0x7f0a0014
 int string lbl_enter_username 0x7f0a0012
 int string lbl_login 0x7f0a0015

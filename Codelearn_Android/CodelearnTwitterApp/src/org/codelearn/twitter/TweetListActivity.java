@@ -96,8 +96,13 @@ public class TweetListActivity extends ListActivity {
 	protected void onListItemClick(ListView l, View v, int position,long id) {
 	
 		Intent intent = new Intent(this, TweetDetailActivity.class);
-		intent.putExtra("MyClass",(Tweet) getListAdapter().getItem(position));
-	     startActivity(intent);
+		
+		Tweet mTweet = (Tweet) getListAdapter().getItem(position);
+		
+		intent.putExtra("MyTweet",mTweet);
+	    startActivity(intent);
+	     
+	     
 	}
 	
 	public void tweetDisplay(List<Tweet> tweetsRead){

@@ -19,6 +19,7 @@
     <string name="head_text">Head Text</string>
     <string name="body_text">Body Text</string>
     <string name="date">20 Nov 2013</string>
+    <string name="imgDescDetail">Tweet Image Detail</string>
         
 
 </resources>
