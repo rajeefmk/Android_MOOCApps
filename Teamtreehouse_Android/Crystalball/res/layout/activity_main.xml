@@ -1,4 +1,3 @@
-
 	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	    xmlns:tools="http://schemas.android.com/tools"
 	    android:layout_width="wrap_content"
@@ -22,15 +21,26 @@
 		    android:id="@+id/textView1"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
-		    android:layout_marginTop="29dp" />
+		    android:layout_centerHorizontal="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginTop="29dp"
+		    android:shadowColor="@android:color/white"
+		    android:shadowRadius="10"
+		    android:textColor="@android:color/white" 
+		    android:textSize="20sp"
+		    
+		    />
 
-		<Button
+		<!--  <Button
 		    android:id="@+id/button1"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:layout_alignBottom="@+id/imageView1"
 		    android:layout_centerHorizontal="true"
-		    android:text="@string/button" />
+		    android:text="@string/button"
+		    android:textColorLink="#3F0F7F"
+		    android:textSize="24sp"
+		    android:textStyle="bold|italic" />  -->
 
 	</RelativeLayout>
 

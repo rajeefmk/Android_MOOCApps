@@ -21,14 +21,17 @@ public class CrystalBall {
 	
 	public String getAnAnswer(){
 		
-		
-		
 		String answer="";
+		
 		//Randomly select one of three answers : Yes,No or Maybe
 		
 		Random randomGenerator = new Random();// Construct a new Random number Generator
 		int randomNumber= randomGenerator.nextInt(mAnswers.length);
 		
+		//The Array Case
+				answer = mAnswers[randomNumber];
+				
+				return answer;
 		
 		//answer=Integer.toString(randomNumber);
 		
@@ -50,10 +53,7 @@ public class CrystalBall {
 			answer="Sorry, There was an error";
 		}*/
 		
-		//The Array Case
-		answer=mAnswers[randomNumber];
 		
-		return answer;
 		
 	}
 }
