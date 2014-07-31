@@ -8,6 +8,7 @@
 	<string name="true_answer">You are correct</string>
 	<string name="false_answer">You are wrong</string>
 	<string name="next_button">Next</string>
+	<string name="prev_button">Prev</string>
 	
 	<!--  Questions -->
 	
