@@ -40,10 +40,6 @@ public class ServiceHandler {
 		se.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
 		
 		mHttpPost.setEntity(se);
-		//mHttpPost.setHeader("Authorization",mToken);
-		mHttpPost.setHeader("Accept", "application/json");
-		mHttpPost.setHeader("Content-Type", "application/json");
-		//Log.i(TAG,"Header set with token");
 			
 		HttpResponse mHttpResponse = httpClient.execute(mHttpPost);
 		Log.i(TAG,"httppost is executed");
