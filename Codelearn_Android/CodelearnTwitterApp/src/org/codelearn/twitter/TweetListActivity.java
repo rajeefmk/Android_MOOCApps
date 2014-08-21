@@ -16,9 +16,12 @@ import android.widget.ListView;
 
 public class TweetListActivity extends ListActivity {
 	
+	FileInputStream fis;
+	ObjectInputStream ois;
+	
 	private static final String TWEETS_CACHE_FILE = "tweet_cache.ser";
 	
-		List<Tweet> tweetsRead = new ArrayList<Tweet>();
+	List<Tweet> tweetsRead = new ArrayList<Tweet>();
 	List<Tweet> tweetsWrite = new ArrayList<Tweet>();
 	
 	TweetAdapter mTweetAdapter;
@@ -30,13 +33,18 @@ public class TweetListActivity extends ListActivity {
 		
 		//File Read Code: Reading from TWEETS_CACHE_FILE and Storing it to tweetsRead arraylist
 		//which is later on passed to Adapter
-		FileInputStream fis = null;
-		ObjectInputStream ois = null;
+		//FileInputStream fis = null;
+		//ObjectInputStream ois = null;
 		
 		try{
 			fis = openFileInput(TWEETS_CACHE_FILE);
+			Log.i("Test", "opened file input stream");
+			
 			ois = new ObjectInputStream(fis);
+			Log.i("Test", "opened object input stream");
+			
 			tweetsRead = (List<Tweet>) ois.readObject();
+			Log.i("Test", "TweetsRead is stored with object from ois");
 			
 		}catch(Exception e){
 			

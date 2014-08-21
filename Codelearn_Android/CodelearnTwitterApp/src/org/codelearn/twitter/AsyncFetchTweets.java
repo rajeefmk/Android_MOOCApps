@@ -5,10 +5,13 @@ import java.util.List;
 
 import org.codelearn.twitter.models.Tweet;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.util.Log;
 
 public class AsyncFetchTweets extends AsyncTask<Void, Void, List<Tweet>>{
+	
+	ProgressDialog pDialog;
 	
 	public static final String LogCatAsync= "AsyncWriteTweets";
 	
@@ -24,6 +27,16 @@ public class AsyncFetchTweets extends AsyncTask<Void, Void, List<Tweet>>{
 	
 	}
 
+	@Override
+	protected void onPreExecute() {
+		super.onPreExecute();
+		
+		pDialog = new ProgressDialog(mTweetListActivity);
+		pDialog.setMessage("Please wait...");
+		pDialog.setCancelable(false);
+		pDialog.show();
+	}
+	
 	@Override
 	protected List<Tweet> doInBackground(Void... params) {
 		
@@ -59,7 +72,8 @@ public class AsyncFetchTweets extends AsyncTask<Void, Void, List<Tweet>>{
 	@Override
 	protected void onPostExecute(List<Tweet> result) {
 		//super.onPostExecute(result);
-		
+		if (pDialog.isShowing())
+			pDialog.dismiss();
 		mTweetListActivity.tweetDisplay(result);
 		
 	}

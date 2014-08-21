@@ -11,6 +11,7 @@ public class Tweet implements Serializable{
 	private String body;
 	
 	
+
 	public String getId() {
 		return id;
 	}

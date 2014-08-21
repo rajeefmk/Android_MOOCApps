@@ -43,6 +43,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
     	TextView body = (TextView) row.findViewById(R.id.textView2);
     	body.setText(currentTweet.getBody());
 
+    	
     	return row;
     
 	}
